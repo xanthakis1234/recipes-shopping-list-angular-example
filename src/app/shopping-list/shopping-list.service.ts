@@ -21,4 +21,14 @@ and then we get a new slice of the ingredients list
     this.ingredients.push(ingredient);
     this.ingredientsChange.emit(this.ingredients.slice());
   }
+
+  /*turn an array of elements into a list of elements
+  here we get an array and if we push it it will make one
+  object. we want to push each item in the array into now objects
+  To do this you simply use the spread operator (... Array)
+ */
+  addIngredients(ingredients: Ingredient[]){
+    this.ingredients.push(...ingredients);
+    this.ingredientsChange.emit(this.ingredients.slice());
+  }
 }
